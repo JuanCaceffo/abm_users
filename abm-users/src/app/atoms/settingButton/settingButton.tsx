@@ -12,8 +12,8 @@ const SettingButton: FC<settingButtonType> = (
 
 ) => {
   return <button 
-    className={styles.header_button}
-    onClick={onClick}
+      className={styles.header_button}
+      onClick={onClick}
     >
     <i className={"pi pi-cog "+styles.icon} ></i>
   </button>  

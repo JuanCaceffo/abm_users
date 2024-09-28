@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FC, ReactNode } from "react";
 import styles from './header.module.css'
+import SettingButton from "src/app/atoms/settingButton/settingButton";
 
 type headerType = {
   leftSide?: ReactNode,
@@ -11,8 +12,8 @@ const Header: FC<headerType> = (
   {
     leftSide = 
     <Image
-      width={46}
-      height={46}
+      width={26}
+      height={26}
       src="/public/logo.png"
       alt="Logo" 
     />,
@@ -23,7 +24,10 @@ const Header: FC<headerType> = (
   return <>
   <header className={styles.header}>
     {leftSide}
+    <ul className={styles.nav}>
+    <SettingButton/>
     {rigthSide}
+    </ul>
   </header>
   </>
   
