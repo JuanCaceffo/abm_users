@@ -1,6 +1,6 @@
 export type UserData = {
   id: number,
-  username: string,
-  state: string,
-  sector: string
+  usuario: string,
+  estado: string,
+  sector: number
 }

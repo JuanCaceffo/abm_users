@@ -1,6 +1,6 @@
 import { UserData } from "src/types/userTypes";
 
-export const userMockedData: UserData = [
+export const userMockedData: Array<UserData> = [
   {
     "usuario": "STAR OVER SRL",
     "estado": "INACTIVO",
