@@ -23,7 +23,13 @@ const UserTable: FC<userTableProps> = (
   return <section className={styles.table_container}>
     <DataTable  value={userData} tableStyle={{ minWidth: '50rem' }}>
       {columns.map((col) => (
-        <Column key={col.field} field={col.field} header={col.header} sortable></Column>
+        <Column  
+          className={`${styles.column} ${col.field == 'usuario' ? styles.user_col : ''}`}
+          key={col.field} 
+          field={col.field} 
+          header={col.header} 
+          sortable
+        />
       ))}
     </DataTable>
   </section>
