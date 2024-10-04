@@ -1,15 +1,38 @@
-import UserTable from "./atoms/userTable/userTable";
-import styles from "./page.module.css";
+//libraries
+//domain
+import { FC } from "react";
 import { userService } from "src/services/UserService";
+//types
+import { stateT } from "src/types/filetTypes";
+//components
+import UserTable from "./atoms/userTable/userTable";
+import Filter from "./molecules/filter/filter";
+//styles
+import styles from "./page.module.css";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      {
-        userService.getAllUsers().then((users) => (
-          <UserTable values={users}/>
-        ))
-      }
-    </div>
-  );
+type homeT = {
+  searchParams: { [key: string]: string | string[] | undefined };
 }
+
+export const Home: FC<homeT> = async ({
+  searchParams
+}) => {
+
+  const userData = await userService.getAllUsers(
+    {username: searchParams.username as string,
+    state: searchParams.state as stateT} 
+  )
+
+  return (
+    <main className={styles.page}>
+      <header>
+        <Filter/>
+      </header>
+      <section>
+        <UserTable values={userData}/>
+      </section>
+    </main>
+  )
+}
+
+export default Home

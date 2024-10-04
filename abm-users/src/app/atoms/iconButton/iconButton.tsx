@@ -1,8 +1,8 @@
-import { FC } from 'react'
+import { FC, MouseEvent } from 'react'
 import styles from './iconButton.module.css'
 
 type iconButtonProps = {
-  onClick?: () => void,
+  onClick: (e: MouseEvent<HTMLButtonElement>) => void,
   iconClassname: string,
   withBackground?: boolean
 }
@@ -11,7 +11,7 @@ const IconButton: FC<iconButtonProps> = (
 {
   onClick,
   iconClassname,
-  withBackground = false
+  withBackground = false,
 }
 
 ) => {
