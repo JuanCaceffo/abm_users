@@ -2,7 +2,7 @@ import { FC, MouseEvent } from 'react'
 import styles from './iconButton.module.css'
 
 type iconButtonProps = {
-  onClick: (e: MouseEvent<HTMLButtonElement>) => void,
+  onClick?: (e: MouseEvent<HTMLButtonElement>) => void,
   iconClassname: string,
   withBackground?: boolean
 }

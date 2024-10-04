@@ -48,15 +48,14 @@ const Filter: FC = () => {
         showClear
       />
       <div>
-
-          <Link
-            href={`?${new URLSearchParams({
-              username: username ?? '',
-              state: state ?? ''
-            })}`}
-          >
-            <IconButton iconClassname='pi pi-filter' withBackground />
-          </Link>
+        <Link
+          href={`?${new URLSearchParams({
+            username: username ?? '',
+            state: state ?? ''
+          })}`}
+        >
+          <IconButton iconClassname='pi pi-filter' withBackground />
+        </Link>
         <IconButton onClick={(e) => {e.preventDefault()}} iconClassname='pi pi-sliders-v' withBackground/>
       </div>
     </section>
