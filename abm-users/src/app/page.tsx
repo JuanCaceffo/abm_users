@@ -19,8 +19,8 @@ export const Home: FC<homeT> = async ({
 }) => {
 
   const userData = await userService.getAllUsers(
-    {username: searchParams.username as string,
-    state: searchParams.state as stateT} 
+    searchParams.username as string,
+    searchParams.state as stateT 
   )
 
   return (
