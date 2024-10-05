@@ -1,5 +1,14 @@
-.inputs_container{
+.filer_container{
   display: flex;
   justify-content: space-between;
-  width: 100%;  
+  gap: 2em;
+  width: 100%;
+  margin-bottom: 2rem;  
+}
+.filter_btns {
+  display: flex;
+  gap: 1em;
+} 
+.input_container{
+  flex-grow: 1;
 }
