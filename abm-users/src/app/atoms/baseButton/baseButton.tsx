@@ -18,8 +18,7 @@ type BaseButtonType = {
 const BaseButton: FC<BaseButtonType> = ({
   title,
   onClick = () => {},
-  props,
-  children
+  props
 }) => {
   return (
     <Button
@@ -29,7 +28,6 @@ const BaseButton: FC<BaseButtonType> = ({
       }}
     >
       {title}
-      {children}
     </Button>
   )
 }
