@@ -20,10 +20,10 @@ const Header: FC<headerType> = ({
     <>
       <header className={`${className} ${styles.header}`}>
         {leftSide}
-        <ul className={styles.nav}>
+        <nav className={styles.nav}>
           <SimpleIconButton icon='pi-cog'/>
           {rigthSide}
-        </ul>
+        </nav>
       </header>
     </>
   )

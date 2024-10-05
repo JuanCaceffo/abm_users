@@ -11,12 +11,8 @@
   margin: 2rem 4.5rem;
   grid-area: content;
 }
-.asaid{
-  display: flex;
-  justify-content: center;
-  background-color: var(--secondary);
+.asaid_cont{
   grid-area: asaid;
-  width: 5rem;
 }
 .header_cont{
   grid-area: header;

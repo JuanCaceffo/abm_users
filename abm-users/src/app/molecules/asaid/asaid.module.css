@@ -1,0 +1,13 @@
+.asaid{
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary);
+  width: 5rem;
+}
+.nav_container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: fit-content;
+  padding: 2em 0;
+}
