@@ -1,35 +1,35 @@
 //libraries
+import { FC } from 'react'
 //domain
-import { FC } from "react";
-import { userService } from "src/services/UserService";
+import { userService } from 'src/services/UserService'
 //types
-import { stateT } from "src/types/filetTypes";
+import { stateT } from 'src/types/filetTypes'
 //components
-import UserTable from "./atoms/userTable/userTable";
-import Filter from "./molecules/filter/filter";
+import UserTable from './atoms/userTable/userTable'
+import Filter from './molecules/filter/filter'
+import NewUser from './Organisms/newUser/newUser'
 //styles
-import styles from "./page.module.css";
+import styles from './page.module.css'
 
 type homeT = {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export const Home: FC<homeT> = async ({
-  searchParams
-}) => {
-
+export const Home: FC<homeT> = async ({ searchParams }) => {
+  //Realizamos el request con el filtro obtenido por los parametros obtenidos desde la URL
   const userData = await userService.getAllUsers(
     searchParams.username as string,
-    searchParams.state as stateT 
+    searchParams.state as stateT
   )
 
   return (
     <main className={styles.page}>
-      <header>
-        <Filter/>
+      <header className="w-full">
+        <NewUser />
       </header>
+      <Filter />
       <section>
-        <UserTable values={userData}/>
+        <UserTable values={userData} />
       </section>
     </main>
   )
