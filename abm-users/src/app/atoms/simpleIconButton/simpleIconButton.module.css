@@ -1,0 +1,11 @@
+.simple_icon {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+  transition: scale 0.2s ;
+}
+.simple_icon:active {
+  scale: 1.1;
+}
