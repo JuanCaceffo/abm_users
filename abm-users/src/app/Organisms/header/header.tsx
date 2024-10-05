@@ -13,7 +13,7 @@ type headerType = {
 
 const Header: FC<headerType> = ({
   className,
-  leftSide = <Image width={26} height={26} src="/public/logo.png" alt="Logo" />,
+  leftSide = <Image width={36} height={36} src="/logo.png" alt="Logo" />,
   rigthSide
 }) => {
   return (
