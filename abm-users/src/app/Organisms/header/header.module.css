@@ -8,7 +8,20 @@
   background-color: var(--primary);
 }
 .nav{
+  height: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   gap: 1em;
+}
+.setting_btn {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+  transition: scale 0.2s ;
+}
+.setting_btn:active {
+  scale: 1.1;
 }
