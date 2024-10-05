@@ -13,6 +13,8 @@ import BaseButton from 'src/app/atoms/baseButton/baseButton'
 //Types
 import { filterData, stateT } from 'src/types/filetTypes'
 
+
+// Este componente comparte estado con la pagina principal por medio de search params
 const Filter: FC = () => {
   const [filterState, setFilterState] = useState<filterData>({})
   const { username, state } = filterState
@@ -66,7 +68,7 @@ const Filter: FC = () => {
               icon: 'pi pi-filter',
               severity: 'secondary',
             }}
-          ></BaseButton>
+          />
         </Link>
         <BaseButton
           onClick={(e) => {
