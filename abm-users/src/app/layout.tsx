@@ -9,6 +9,7 @@ import './globals.css'
 import styles from './layout.module.css'
 //Components
 import Header from './Organisms/header/header'
+import Nav from './molecules/nav/Nav'
 
 export default function RootLayout({
   children,
@@ -21,7 +22,9 @@ export default function RootLayout({
         <PrimeReactProvider>
         <main className={styles.main_container}>
           <Header className={styles.header_cont}/>     
-          <aside className={styles.asaid}></aside>     
+          <aside className={styles.asaid}>
+            <Nav/>
+          </aside>     
           <article className={styles.content}>{children}</article>
         </main>
         </PrimeReactProvider>

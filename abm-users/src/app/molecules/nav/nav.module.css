@@ -1,0 +1,7 @@
+.nav_container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: fit-content;
+  padding-inline: 0;
+}

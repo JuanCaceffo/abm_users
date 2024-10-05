@@ -12,8 +12,11 @@
   grid-area: content;
 }
 .asaid{
+  display: flex;
+  justify-content: center;
   background-color: var(--secondary);
   grid-area: asaid;
+  width: 5rem;
 }
 .header_cont{
   grid-area: header;
