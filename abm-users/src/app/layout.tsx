@@ -9,7 +9,7 @@ import './globals.css'
 import styles from './layout.module.css'
 //Components
 import Header from './Organisms/header/header'
-import Asaid from './molecules/asaid/asaid'
+import Asaid from './Organisms/asaid/asaid'
 
 export default function RootLayout({
   children,
