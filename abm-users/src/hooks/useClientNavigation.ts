@@ -29,10 +29,11 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 const useClientNavigation = () => {
   const { replace } = useRouter()
   const path = usePathname()
-  const params = useSearchParams()
+  const readOnlySearchParams = useSearchParams()
 
   //permite obtener objeto SerachParams con permiso de escritura y  parametros actuales
-  const actualParams = () => new URLSearchParams(params.toString())
+  const actualParams = () =>
+    new URLSearchParams(readOnlySearchParams.toString())
 
   //Permite actualizar varios parametros
   const updateParams = (params: Record<string, string>) => {
@@ -60,6 +61,7 @@ const useClientNavigation = () => {
     updateParams,
     actualFullPath,
     fullReplace,
+    readOnlySearchParams,
   }
 }
 

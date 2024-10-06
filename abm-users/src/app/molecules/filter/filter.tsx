@@ -12,10 +12,9 @@ import styles from './filter.module.css'
 import BaseButton from 'src/app/atoms/baseButton/baseButton'
 //Types
 import { filterData, stateT } from 'src/types/filetTypes'
-import useClientNavigation from 'src/hooks/useClientNavigation'
 //Custom hooks
+import useClientNavigation from 'src/hooks/useClientNavigation'
 
-//TODO: Updatear componente con datos de SearchParams
 // Este componente comparte estado con la pagina principal por medio de search params
 const Filter: FC = () => {
   const [filterState, setFilterState] = useState<filterData>({})
@@ -37,6 +36,7 @@ const Filter: FC = () => {
     const params = updateParams({
       username: username ?? '',
       state: state ?? '',
+      page: '1', //Setamos la pagina en 1 cada vez que se realiza el filtro
     })
 
     return actualFullPath(params)
