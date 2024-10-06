@@ -1,8 +1,9 @@
-.table_container{
+.table_container {
   min-width: 50rem;
 }
 .user_col {
   cursor: pointer;
   color: var(--primary);
+  font-weight: bolder;
   text-decoration: underline;
 }
