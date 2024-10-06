@@ -20,7 +20,7 @@ const Filter: FC = () => {
   const [filterState, setFilterState] = useState<filterData>({})
   const { username, state } = filterState
 
-  const { updateParams, actualFullPath } = useClientNavigation()
+  const { updateParams } = useClientNavigation()
 
   const optEstado: stateT[] = ['ACTIVO', 'INACTIVO']
 
@@ -39,7 +39,7 @@ const Filter: FC = () => {
       page: '1', //Setamos la pagina en 1 cada vez que se realiza el filtro
     })
 
-    return actualFullPath(params)
+    return `?${params}`
   }
 
   return (
