@@ -26,15 +26,17 @@ export const Home: FC<homeT> = async ({ searchParams }) => {
   )
 
   return (
-    <main className={styles.page}>
-      <header className="w-full">
-        <NewUser />
-      </header>
-      <Filter />
-      <section>
-        <UserTable values={userData} />
+    <main className={`gap-3 ${styles.page}`}>
+      <section className="flex flex-column gap-3">
+        <header className="w-full">
+          <NewUser />
+        </header>
+        <Filter />
+        <section>
+          <UserTable values={userData} />
+        </section>
       </section>
-      <footer className="w-full">
+      <footer className="align-self-end w-full">
         <Paginator />
       </footer>
     </main>

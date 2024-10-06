@@ -11,21 +11,21 @@ type BaseButtonType = {
   title?: string
   className?: string
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void
-  props: ButtonProps,
+  props: ButtonProps
   children?: ReactNode
 }
 
 const BaseButton: FC<BaseButtonType> = ({
   title,
   onClick = () => {},
-  props
+  props,
 }) => {
   return (
     <Button
-      {...props}
       onClick={(e) => {
         onClick(e)
       }}
+      {...props}
     >
       {title}
     </Button>

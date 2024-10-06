@@ -11,7 +11,7 @@ class UserService extends Service {
     state?: stateT,
     page?: string,
     limit?: string
-  ): Promise<User[]> {
+  ): Promise<UserData[]> {
     const params = {
       usuario: username ? username : undefined,
       estado: state ? state : undefined,
@@ -22,7 +22,7 @@ class UserService extends Service {
     const userData = (
       await this.httpClient.get<UserData[]>(`${pathsPrefix.user}`, { params })
     ).data
-    return userData.map((userData) => new User(userData))
+    return userData
   }
 }
 
