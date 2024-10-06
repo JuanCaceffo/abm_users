@@ -7,7 +7,7 @@ import { stateT } from 'src/types/filetTypes'
 //components
 import UserTable from './atoms/userTable/userTable'
 import Filter from './molecules/filter/filter'
-import NewUser from './Organisms/newUser/newUser'
+import NewUser from './molecules/newUser/newUser'
 import Paginator from './atoms/paginator/Paginator'
 //styles
 import styles from './page.module.css'

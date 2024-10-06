@@ -5,7 +5,7 @@ import { FC, useState } from 'react'
 import BaseButton from 'src/app/atoms/baseButton/baseButton'
 //Styles
 import styles from './newUser.module.css'
-import UserDialog from '../userDialog/userDialog'
+import UserDialog from '../../Organisms/userDialog/userDialog'
 
 const NewUser: FC = () => {
   const [visible, setVisible] = useState<boolean>(false)

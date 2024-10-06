@@ -1,7 +1,7 @@
 'use client'
 //Libraires
 import { FC, useState } from 'react'
-import { DataTable } from 'primereact/datatable'
+import { DataTable, DataTableRowClickEvent } from 'primereact/datatable'
 import { Column } from 'primereact/column'
 //Domain
 import { User } from 'src/models/User'
@@ -16,6 +16,8 @@ type userTableProps = {
 
 const UserTable: FC<userTableProps> = ({ values }) => {
   const [visible, setVisible] = useState<boolean>(false)
+  const [user, setUser] = useState<UserData>()
+
   const columns = [
     { field: 'id', header: 'Id' },
     { field: 'usuario', header: 'Usuario' },
@@ -23,14 +25,17 @@ const UserTable: FC<userTableProps> = ({ values }) => {
     { field: 'sector', header: 'Sector' },
   ]
 
+  const handleRowClick = (e: DataTableRowClickEvent) => {
+    setVisible(true)
+    setUser(e.data as UserData)
+  }
+
   return (
     <section className={styles.table_container}>
       <DataTable
         value={values}
         selectionMode={'single'}
-        onRowClick={(e) => {
-          setVisible(true)
-        }}
+        onRowClick={handleRowClick}
         tableStyle={{ minWidth: '50rem' }}
       >
         {columns.map((col) => (
@@ -51,6 +56,7 @@ const UserTable: FC<userTableProps> = ({ values }) => {
           if (!visible) return
           setVisible(false)
         }}
+        userData={user}
       />
     </section>
   )
