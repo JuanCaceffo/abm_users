@@ -11,7 +11,7 @@ type BaseButtonType = {
   title?: string
   className?: string
   onClick?: (e: MouseEvent<HTMLButtonElement>) => void
-  props: ButtonProps
+  props?: ButtonProps
   children?: ReactNode
 }
 

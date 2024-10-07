@@ -7,6 +7,7 @@ import SimpleIconButton from 'src/app/atoms/simpleIconButton/simpleIconButton'
 //Styles
 import styles from './userDialog.module.css'
 import { UserData } from 'src/types/userTypes'
+import UserForm from 'src/app/molecules/userForm/userForm'
 
 //TODO: ver si manejar la data del usaurio dentro de este componente o mejor recibir una propiedad con el fomr component
 type UserDialogProps = {
@@ -31,7 +32,9 @@ const UserDialog: FC<UserDialogProps> = ({ visible, onHide, props }) => {
             }
             rigthSide={<SimpleIconButton onClick={hide} icon="pi pi-minus" />}
           />
-          <section className={`h-full bg-white`}></section>
+          <section className={`h-full bg-white`}>
+            <UserForm />
+          </section>
         </main>
       )}
     />

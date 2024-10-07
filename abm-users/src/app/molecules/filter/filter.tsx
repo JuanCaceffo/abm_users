@@ -11,18 +11,16 @@ import styles from './filter.module.css'
 //Components
 import BaseButton from 'src/app/atoms/baseButton/baseButton'
 //Types
-import { filterData, stateT } from 'src/types/filetTypes'
+import { filterData } from 'src/types/filetTypes'
 //Custom hooks
 import useClientNavigation from 'src/hooks/useClientNavigation'
+import { optState } from 'src/helpers/constants'
 
 // Este componente comparte estado con la pagina principal por medio de search params
 const Filter: FC = () => {
   const [filterState, setFilterState] = useState<filterData>({})
   const { username, state } = filterState
-
   const { updateParams } = useClientNavigation()
-
-  const optEstado: stateT[] = ['ACTIVO', 'INACTIVO']
 
   //Funcion para controlar los inputs del filtro y actualizar el estado de los mismos
   const handleChange = (
@@ -64,7 +62,7 @@ const Filter: FC = () => {
           onChange={(e) => {
             handleChange('state', e)
           }}
-          options={optEstado}
+          options={optState}
           checkmark
           showClear
         />
