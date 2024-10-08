@@ -1,6 +1,5 @@
 import { UserData } from 'src/types/userTypes'
 import Service from './config/service'
-import { User } from 'src/models/User'
 import { pathsPrefix } from './config/paths'
 import { stateT } from 'src/types/filetTypes'
 
@@ -19,10 +18,17 @@ class UserService extends Service {
       _limit: limit,
     }
 
-    const userData = (
+    return (
       await this.httpClient.get<UserData[]>(`${pathsPrefix.user}`, { params })
     ).data
-    return userData
+  }
+
+  async updateUser(user: UserData) {
+    return this.httpClient.put<UserData>(`${pathsPrefix.user}/${user.id}`, user)
+  }
+
+  async createUser(user: UserData) {
+    return this.httpClient.post<UserData>(`${pathsPrefix.user}`, user)
   }
 }
 

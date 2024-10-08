@@ -17,7 +17,12 @@ type UserDialogProps = {
   userData?: UserData
 }
 
-const UserDialog: FC<UserDialogProps> = ({ visible, onHide, props }) => {
+const UserDialog: FC<UserDialogProps> = ({
+  visible,
+  onHide,
+  props,
+  userData,
+}) => {
   return (
     <Dialog
       {...props}
@@ -33,7 +38,7 @@ const UserDialog: FC<UserDialogProps> = ({ visible, onHide, props }) => {
             rigthSide={<SimpleIconButton onClick={hide} icon="pi pi-minus" />}
           />
           <section className={`h-full bg-white`}>
-            <UserForm />
+            <UserForm userData={userData} onHide={onHide} />
           </section>
         </main>
       )}

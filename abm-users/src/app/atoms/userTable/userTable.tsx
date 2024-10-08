@@ -3,12 +3,12 @@
 import { FC, useState } from 'react'
 import { DataTable, DataTableRowClickEvent } from 'primereact/datatable'
 import { Column } from 'primereact/column'
-//Domain
-import { User } from 'src/models/User'
+//Types
+import { UserData } from 'src/types/userTypes'
 //Styles
 import styles from './userTable.module.css'
+//Components
 import UserDialog from 'src/app/Organisms/userDialog/userDialog'
-import { UserData } from 'src/types/userTypes'
 
 type userTableProps = {
   values: Array<UserData>
@@ -27,7 +27,7 @@ const UserTable: FC<userTableProps> = ({ values }) => {
 
   const handleRowClick = (e: DataTableRowClickEvent) => {
     setVisible(true)
-    setUser(e.data as UserData)
+    setUser(e.data as UserData) //TODO: quizas es mejor que la funete de verdad sea el back y conviene obtener la data desde ahi
   }
 
   return (

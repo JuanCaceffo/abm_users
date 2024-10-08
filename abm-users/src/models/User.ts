@@ -1,14 +1,12 @@
-import { UserData } from "src/types/userTypes";
+import { UserData } from 'src/types/userTypes'
 
-export class User{
+export class User {
   id: number
   username: string
   state: string
   sector: number
-  constructor(
-    props: UserData
-  ){
-    const {id, usuario, estado, sector} = props
+  constructor(props: UserData) {
+    const { id, usuario, estado, sector } = props
     this.id = id
     this.username = usuario
     this.state = estado
@@ -20,11 +18,11 @@ export class User{
       id: this.id,
       usuario: this.username,
       estado: this.state,
-      sector: this.sector
+      sector: this.sector,
     }
   }
 
-  capitalizedUserName(){
-    return this.username.charAt(0).toUpperCase() + this.username.slice(1) 
+  capitalizedUserName() {
+    return this.username.charAt(0).toUpperCase() + this.username.slice(1)
   }
 }
