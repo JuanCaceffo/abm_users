@@ -46,7 +46,7 @@ const Filter: FC = () => {
         <IconField value={username} iconPosition="left">
           <InputIcon className="pi pi-search"> </InputIcon>
           <InputText
-            className={`${styles.search} w-full`}
+            className={`p-inputtext-lg w-full`}
             placeholder="Search"
             onChange={(e) => {
               handleChange('username', e.target)
@@ -56,7 +56,7 @@ const Filter: FC = () => {
       </section>
       <section className={styles.input_container}>
         <Dropdown
-          className={`${styles.search_dropdown} w-full h-full`}
+          className={`p-inputtext-lg w-full h-full`}
           placeholder="Selecciona el estado"
           value={state}
           onChange={(e) => {
@@ -67,10 +67,11 @@ const Filter: FC = () => {
           showClear
         />
       </section>
-      <section className={styles.filter_btns}>
+      <section className={`${styles.filter_btns}`}>
         <Link href={handleLink()}>
           <BaseButton
             props={{
+              className: 'h-full',
               icon: 'pi pi-filter',
               severity: 'secondary',
             }}

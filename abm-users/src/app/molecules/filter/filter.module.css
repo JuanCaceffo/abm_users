@@ -1,5 +1,6 @@
-.filer_container{
+.filer_container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 2em;
   width: 100%;
@@ -7,7 +8,7 @@
 .filter_btns {
   display: flex;
   gap: 1em;
-} 
-.input_container{
+}
+.input_container {
   flex-grow: 1;
 }

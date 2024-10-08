@@ -12,7 +12,7 @@ const NewUser: FC = () => {
 
   return (
     <div className={styles.new_user_cont}>
-      <span className="font-bold text-4xl">Usuario</span>
+      <span className="font-bold text-4xl">Usuarios</span>
       <BaseButton
         className="font-bold"
         onClick={() => setVisible(true)}
