@@ -1,11 +1,10 @@
 import axios from 'axios'
 
-//TODO: manejar el URL de la API con variables de entorno
 const httpClient = axios.create({
-  baseURL: 'https://staging.duxsoftware.com.ar/api',
+  baseURL: process.env.NEXT_APP_API_SERVER_URL,
   params: {
-    sector: '7000'
-  }
+    sector: process.env.NEXT_APP_SECTOR_FILTER,
+  },
 })
 
 export default httpClient
