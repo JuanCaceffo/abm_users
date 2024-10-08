@@ -12,3 +12,8 @@
   gap: 1em;
   width: 100%;
 }
+.error_msg {
+  height: 1em;
+  margin-top: 0.3em;
+  visibility: hidden;
+}
