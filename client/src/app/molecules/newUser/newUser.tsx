@@ -3,9 +3,9 @@
 import { FC, useState } from 'react'
 //Components
 import BaseButton from 'src/app/atoms/baseButton/baseButton'
+import UserDialog from '../../Organisms/userDialog/userDialog'
 //Styles
 import styles from './newUser.module.css'
-import UserDialog from '../../Organisms/userDialog/userDialog'
 
 const NewUser: FC = () => {
   const [visible, setVisible] = useState<boolean>(false)

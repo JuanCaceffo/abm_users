@@ -27,7 +27,7 @@ const Paginator: FC = () => {
     const rows = readOnlySearchParams.get('limit')
 
     if (page && rows) {
-      const actualPage = +page - 1 //Le restamos 1 a la pagina por que comienza en 1
+      const actualPage = +page - 1 //Le restamos 1 a la pagina ya que le sumamos 1 cuando cambia
       setPage({
         first: actualPage * +rows, //Obtenemos el comienzo de la fila
         rowsPerPage: +rows, // indicamos la cantidad de rows que tenemos

@@ -4,12 +4,12 @@ import { FC } from 'react'
 //Components
 import Header from '../header/header'
 import SimpleIconButton from 'src/app/atoms/simpleIconButton/simpleIconButton'
+import UserForm from 'src/app/molecules/userForm/userForm'
 //Styles
 import styles from './userDialog.module.css'
+//Types
 import { UserData } from 'src/types/userTypes'
-import UserForm from 'src/app/molecules/userForm/userForm'
 
-//TODO: ver si manejar la data del usaurio dentro de este componente o mejor recibir una propiedad con el fomr component
 type UserDialogProps = {
   visible: boolean
   onHide: () => void

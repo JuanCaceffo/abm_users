@@ -3,10 +3,6 @@
 import { FC, MouseEvent, ReactNode } from 'react'
 import { Button, ButtonProps } from 'primereact/button'
 
-//Styles
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './baseButton.module.css'
-
 type BaseButtonType = {
   title?: string
   className?: string

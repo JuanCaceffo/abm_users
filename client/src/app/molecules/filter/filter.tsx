@@ -14,6 +14,7 @@ import BaseButton from 'src/app/atoms/baseButton/baseButton'
 import { filterData } from 'src/types/filetTypes'
 //Custom hooks
 import useClientNavigation from 'src/hooks/useClientNavigation'
+//Helpers
 import { optState } from 'src/helpers/constants'
 
 // Este componente comparte estado con la pagina principal por medio de search params
