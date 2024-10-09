@@ -1,0 +1,46 @@
+{
+  "personal": [
+    {
+      "id": "933644",
+      "estado": "ACTIVO",
+      "sector": 7000,
+      "usuario": "TEISCEIRA"
+    },
+    {
+      "id": "933645",
+      "estado": "ACTIVO",
+      "sector": 7000,
+      "usuario": "GUELFAND"
+    },
+    {
+      "id": "933647",
+      "estado": "ACTIVO",
+      "sector": 1000,
+      "usuario": "DE LUCA"
+    },
+    {
+      "id": "933648",
+      "estado": "ACTIVO",
+      "sector": 1000,
+      "usuario": "ANTO"
+    },
+    {
+      "id": "933649",
+      "estado": "ACTIVO",
+      "sector": 7000,
+      "usuario": "ARMUA"
+    },
+    {
+      "id": "933650",
+      "estado": "INACTIVO",
+      "sector": 1000,
+      "usuario": "SAYAS"
+    },
+    {
+      "id": "933651",
+      "estado": "INACTIVO",
+      "sector": 1000,
+      "usuario": "HAJEK"
+    }
+  ]
+}

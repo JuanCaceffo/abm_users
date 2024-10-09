@@ -1,0 +1,19 @@
+.user_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 35em;
+  padding: 1em 2em;
+}
+.input_cnt {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+.error_msg {
+  height: 1em;
+  margin-top: 0.3em;
+  visibility: hidden;
+}

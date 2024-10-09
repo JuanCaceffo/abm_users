@@ -1,0 +1,19 @@
+.main_container {
+  display: grid;
+  grid-template-areas: 
+    'header header'
+    'asaid content';
+  grid-template-rows: 4rem auto;
+  grid-template-columns: 5rem 1fr;
+  min-height: 100vh;
+}
+.content{
+  margin: 2rem 4.5rem;
+  grid-area: content;
+}
+.asaid_cont{
+  grid-area: asaid;
+}
+.header_cont{
+  grid-area: header;
+}
