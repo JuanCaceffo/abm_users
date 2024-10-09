@@ -5,7 +5,7 @@ import { userService } from 'src/services/UserService'
 //types
 import { stateT } from 'src/types/filetTypes'
 //components
-import UserTable from './atoms/userTable/userTable'
+import UserTable from './molecules/userTable/userTable'
 import Filter from './molecules/filter/filter'
 import NewUser from './molecules/newUser/newUser'
 import Paginator from './atoms/paginator/Paginator'
